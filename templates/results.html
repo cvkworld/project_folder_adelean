@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Résultats de la Recherche{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h1 class="mb-4">Résultats de la Recherche</h1>
+        <p><strong>Temps d'exécution :</strong> {{ results.time }}</p>
+        <p><strong>Nombre total de résultats :</strong> {{ results.total }}</p>
+        <pre><code>{{ results.results | tojson | safe }}</code></pre>
+    </div>
+</div>
+{% endblock %}
